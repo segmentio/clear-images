@@ -15,6 +15,8 @@ var Original = window.Image;
  * Image override that keeps track of images.
  *
  * Careful though, `img instance Override` isn't true.
+ *
+ * @api private
  */
 
 function Override() {
@@ -25,6 +27,8 @@ function Override() {
 
 /**
  * Clear `onload` for each image.
+ *
+ * @api public
  */
 
 exports = module.exports = function(){
@@ -38,6 +42,8 @@ exports = module.exports = function(){
 /**
  * Override `window.Image` to keep track of images,
  * so we can clear `onload`.
+ *
+ * @api public
  */
 
 exports.bind = function(){
@@ -46,6 +52,8 @@ exports.bind = function(){
 
 /**
  * Set `window.Image` back to normal.
+ *
+ * @api public
  */
 
 exports.unbind = function(){
